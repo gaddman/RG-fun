@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+# Messing around with residential gateways
+Poking around with some of Vodafone New Zealand's home gateways.
 
-You can use the [editor on GitHub](https://github.com/gaddman/RG-fun/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## HG659
+ADSL, VDSL, FTTH (UFB) and HFC (Cable/FibreX) router.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Firmware
+Testing with the [B026 firmware](http://downloads.vodafone.co.nz/HG659-16V100R001C206B026_main.bin)
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Opening up the HG659 firmware to see what's inside.
+Install [jefferson](https://github.com/sviehb/jefferson):
+```bash
+sudo apt-get install python-lzma python-pip
+sudo pip install cstruct
+git clone https://github.com/sviehb/jefferson.git
+cd jefferson
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gaddman/RG-fun/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+And extract firmware:
+```bash
+$ jefferson -d HG659fs HG659-16V100R001C206B026_main.bin
+dumping fs #1 to ./HG659fs/fs_1
+Jffs2_raw_dirent count: 792
+Jffs2_raw_inode count: 10188
+Jffs2_raw_summary count: 0
+Jffs2_raw_xattr count: 0
+Jffs2_raw_xref count: 0
+Endianness: Big
+writing S_ISDIR bin
+writing S_ISDIR config
+writing S_ISDIR dev
+writing S_ISDIR etc
+writing S_ISDIR html
+writing S_ISDIR lib
+writing S_ISLNK linuxrc
+writing S_ISDIR mnt
+writing S_ISDIR proc
+writing S_ISDIR sbin
+writing S_ISDIR tmp
+writing S_ISDIR usr
+writing S_ISDIR var
+<snip>
+```
