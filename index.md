@@ -41,7 +41,7 @@ writing S_ISDIR var
 <snip>
 ```
 
-### TR 064 / UPNP
+### TR 064 / UPnP
 See TR064 scan at [HG659-TR064](HG659-TR064.md)
 
 ## Open ports
@@ -62,4 +62,41 @@ PORT      STATE SERVICE
 37443/tcp open  unknown
 
 Nmap done: 1 IP address (1 host up) scanned in 148.98 seconds
+```
+
+## Ultra Hub
+Vodafone Technicolor, model VFH-500
+
+## TR 064 / UPnP
+No response to TR064
+```bash
+$ sudo nmap -sU -p 1900 --script=upnp-info 192.168.1.1
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-09-07 17:34 NZST
+Nmap scan report for ultrahub.hub (192.168.1.1)
+Host is up (0.00036s latency).
+PORT     STATE         SERVICE
+1900/udp open|filtered upnp
+MAC Address: 10:13:31:00:00:00 (Unknown)
+```
+
+## Open ports
+```bash
+$ nmap -p- 192.168.1.1
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2017-09-07 17:35 NZST
+Nmap scan report for ultrahub.hub (192.168.1.1)
+Host is up (0.00072s latency).
+Not shown: 65527 closed ports
+PORT      STATE    SERVICE
+22/tcp    filtered ssh
+53/tcp    open     domain
+80/tcp    open     http
+443/tcp   open     https
+631/tcp   filtered ipp
+8080/tcp  open     http-proxy
+49152/tcp open     unknown
+51005/tcp filtered unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 2626.50 seconds
 ```
