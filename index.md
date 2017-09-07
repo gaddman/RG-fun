@@ -65,9 +65,11 @@ Nmap done: 1 IP address (1 host up) scanned in 148.98 seconds
 ```
 
 ## Ultra Hub
-Vodafone Technicolor, model VFH-500
+Vodafone Technicolor, model H 500-t
 
 ## TR 064 / UPnP
+[Certified](https://openconnectivity.org/certified-product/vodafone-h-500-t) for media server and internet gateway.
+
 No response to TR064
 ```bash
 $ sudo nmap -sU -p 1900 --script=upnp-info 192.168.1.1
