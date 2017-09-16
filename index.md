@@ -70,7 +70,8 @@ Vodafone Technicolor, model H 500-t
 ## TR 064 / UPnP
 [Certified](https://openconnectivity.org/certified-product/vodafone-h-500-t) for media server and internet gateway.
 
-No response to TR064
+No response to TR064 using the nmap script, but see full TR064 scan at [UltraHub-TR064](UltraHub-TR064.md)
+
 ```bash
 $ sudo nmap -sU -p 1900 --script=upnp-info 192.168.1.1
 
