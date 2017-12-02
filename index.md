@@ -1,16 +1,6 @@
 # Messing around with residential gateways
 Poking around with some of Vodafone New Zealand's home gateways.
 
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [HG659](#)
-	- [Firmware](#)
-	- [TR 064 / UPnP](#)
-	- [Open ports](#)
-- [Ultra Hub](#)
-	- [TR 064 / UPnP](#)
-	- [Open ports](#)
-
 ## HG659
 ADSL, VDSL, FTTH (UFB) and HFC (Cable/FibreX) router.
 
