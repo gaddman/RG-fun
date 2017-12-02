@@ -1,6 +1,16 @@
 # Messing around with residential gateways
 Poking around with some of Vodafone New Zealand's home gateways.
 
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [HG659](#)
+	- [Firmware](#)
+	- [TR 064 / UPnP](#)
+	- [Open ports](#)
+- [Ultra Hub](#)
+	- [TR 064 / UPnP](#)
+	- [Open ports](#)
+
 ## HG659
 ADSL, VDSL, FTTH (UFB) and HFC (Cable/FibreX) router.
 
@@ -44,7 +54,7 @@ writing S_ISDIR var
 ### TR 064 / UPnP
 See TR064 scan at [HG659-TR064](HG659-TR064.md)
 
-## Open ports
+### Open ports
 There's also port 1900/udp for UPnP not shown here:
 
 ```bash
@@ -67,7 +77,7 @@ Nmap done: 1 IP address (1 host up) scanned in 148.98 seconds
 ## Ultra Hub
 Vodafone Technicolor, model H 500-t
 
-## TR 064 / UPnP
+### TR 064 / UPnP
 [Certified](https://openconnectivity.org/certified-product/vodafone-h-500-t) for media server and internet gateway.
 
 No response to TR064 using the nmap script, but see full TR064 scan at [UltraHub-TR064](UltraHub-TR064.md)
@@ -83,7 +93,7 @@ PORT     STATE         SERVICE
 MAC Address: 10:13:31:00:00:00 (Unknown)
 ```
 
-## Open ports
+### Open ports
 ```bash
 $ nmap -p- 192.168.1.1
 
