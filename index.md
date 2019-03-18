@@ -2,7 +2,7 @@
 Poking around with some of Vodafone New Zealand's home gateways.
 
 ## Scripted data collection and reboot
-For a Python script to collect some interesting info from your router, or to programmatically reboot it, check out https://github.com/gaddman/rgw-info. Supports UltraHub/UltraHub+ (Technicolor 500-T), Huawei HG659, Vodafone Station (Vox1.5 / Sercomm SHG1500), and Huawei B315.
+For a Python script to collect some interesting info from your router, or to programmatically reboot it, check out [rgw-info](https://github.com/gaddman/rgw-info). Supports UltraHub/UltraHub+ (Technicolor 500-T), Huawei HG659, Vodafone Station (Vox1.5 / Sercomm SHG1500), and Huawei B315.
 
 ## HG659
 ADSL, VDSL, FTTH (UFB) and HFC (Cable/FibreX) router.
