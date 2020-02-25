@@ -66,6 +66,7 @@ PORT      STATE SERVICE
 
 Nmap done: 1 IP address (1 host up) scanned in 148.98 seconds
 ```
+Port 37215 serves the UPnP content as HTTP, while port 37443 serves the same content as HTTPS.
 
 ## Ultra Hub
 Vodafone Technicolor, model H 500-t
